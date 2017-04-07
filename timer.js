@@ -102,11 +102,10 @@ function startTimer() {
 function endTimer() {
   clearInterval(timer);
   timerRunning = false;
-}
 
-// move to oven/script.js
-function initTimerFunc() {
-    startBtn = document.getElementById('start-btn');
-    startBtn.addEventListener("click", startTimer);
+  button = document.createElement("button");
+  button.innerHTML = "Reset";
+  button.addEventListener("click", resetTimer);
+  document.getElementById("buttons").appendChild(button);
+  // document.getElementById('reset-btn').addEventListener("click", resetTimer);
 }
-document.addEventListener('DOMContentLoaded', initTimerFunc);
